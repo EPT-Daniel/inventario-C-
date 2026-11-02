@@ -1,0 +1,53 @@
+﻿@model Reparacao
+@{ ViewData["Title"] = "Detalhe da Reparação"; var custoTotal = (decimal)ViewData["CustoTotal"]!; }
+<div class="card"><div class="card-body">
+<dl class="row">
+<dt class="col-3">Id</dt><dd class="col-9">@Model.Id</dd>
+<dt class="col-3">Equipamento</dt><dd class="col-9">@Model.Equipamento?.TipoEquipamento (@Model.Equipamento?.Marca)</dd>
+<dt class="col-3">Cliente</dt><dd class="col-9">@Model.Equipamento?.Cliente?.Nome</dd>
+<dt class="col-3">Técnico</dt><dd class="col-9">@(Model.Tecnico?.Nome ?? "-")</dd>
+<dt class="col-3">Data entrada</dt><dd class="col-9">@Model.DataEntrada.ToString("dd/MM/yyyy HH:mm")</dd>
+<dt class="col-3">Descrição avaria</dt><dd class="col-9">@Model.DescricaoAvaria</dd>
+<dt class="col-3">Diagnóstico</dt><dd class="col-9">@Model.Diagnostico</dd>
+<dt class="col-3">Estado</dt><dd class="col-9"><span class="badge bg-blue-lt">@Model.Estado</span></dd>
+<dt class="col-3">Data conclusão</dt><dd class="col-9">@(Model.DataConclusao?.ToString("dd/MM/yyyy") ?? "-")</dd>
+<dt class="col-3">Data entrega</dt><dd class="col-9">@(Model.DataEntrega?.ToString("dd/MM/yyyy") ?? "-")</dd>
+<dt class="col-3">Observações</dt><dd class="col-9">@Model.Observacoes</dd>
+<dt class="col-3">Custo total</dt><dd class="col-9"><strong>@custoTotal.ToString("C2")</strong></dd>
+</dl>
+</div></div>
+<div class="card mt-3">
+    <div class="card-header">
+        <h3 class="card-title">Intervenções</h3>
+        <div class="card-actions">
+            <a asp-controller="Intervencoes" asp-action="Create" asp-route-reparacaoId="@Model.Id" class="btn btn-sm btn-success">Nova Intervenção</a>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Data</th><th>Trabalho</th><th>Peças</th><th>Tempo (h)</th><th>Mão de obra</th><th>Peças (€)</th><th>Total</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var i in Model.Intervencoes)
+            {
+                <tr>
+                    <td>@i.DataIntervencao.ToString("dd/MM/yyyy")</td>
+                    <td>@i.DescricaoTrabalho</td>
+                    <td>@i.PecasUtilizadas</td>
+                    <td>@i.TempoTrabalho</td>
+                    <td>@i.CustoMaoObra.ToString("C2")</td>
+                    <td>@i.CustoPecas.ToString("C2")</td>
+                    <td>@((i.CustoMaoObra + i.CustoPecas).ToString("C2"))</td>
+                    <td class="text-end">
+                        <a asp-controller="Intervencoes" asp-action="Edit" asp-route-id="@i.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <a asp-controller="Intervencoes" asp-action="Delete" asp-route-id="@i.Id" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-link">Voltar</a>
+</div>

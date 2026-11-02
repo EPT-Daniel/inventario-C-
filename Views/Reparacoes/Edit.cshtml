@@ -1,0 +1,28 @@
+﻿@model Reparacao
+@{ ViewData["Title"] = "Editar Reparação"; }
+<div class="card"><div class="card-body">
+<form asp-action="Edit" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3"><label asp-for="EquipamentoId" class="form-label">Equipamento</label>
+        <select asp-for="EquipamentoId" class="form-select" asp-items="@(new Microsoft.AspNetCore.Mvc.Rendering.SelectList(ViewBag.Equipamentos, "Id", "TipoEquipamento"))"></select></div>
+    <div class="mb-3"><label asp-for="TecnicoId" class="form-label">Técnico</label>
+        <select asp-for="TecnicoId" class="form-select">
+            <option value="">-- Sem técnico --</option>
+            @foreach (var t in (ViewBag.Tecnicos as IEnumerable<Tecnico>) ?? new List<Tecnico>()) { <option value="@t.Id" selected="@(Model.TecnicoId==t.Id)">@t.Nome</option> }
+        </select></div>
+    <div class="mb-3"><label asp-for="DataEntrada" class="form-label"></label><input asp-for="DataEntrada" class="form-control" type="datetime-local" /></div>
+    <div class="mb-3"><label asp-for="DescricaoAvaria" class="form-label"></label><textarea asp-for="DescricaoAvaria" class="form-control"></textarea><span asp-validation-for="DescricaoAvaria" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="Diagnostico" class="form-label"></label><textarea asp-for="Diagnostico" class="form-control"></textarea></div>
+    <div class="mb-3"><label asp-for="Estado" class="form-label"></label>
+        <select asp-for="Estado" class="form-select">
+            @foreach (var e in (string[])ViewData["Estados"] ?? ReparacaoService.Estados) { <option value="@e" selected="@(Model.Estado==e)">@e</option> }
+        </select></div>
+    <div class="mb-3"><label asp-for="DataConclusao" class="form-label"></label><input asp-for="DataConclusao" class="form-control" type="date" /></div>
+    <div class="mb-3"><label asp-for="DataEntrega" class="form-label"></label><input asp-for="DataEntrega" class="form-control" type="date" /></div>
+    <div class="mb-3"><label asp-for="Observacoes" class="form-label"></label><textarea asp-for="Observacoes" class="form-control"></textarea></div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-link">Cancelar</a>
+</form>
+</div></div>

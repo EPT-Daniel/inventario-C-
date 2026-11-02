@@ -1,0 +1,35 @@
+﻿@model EquipamentoListViewModel
+@{ ViewData["Title"] = "Equipamentos"; }
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Equipamentos</h3>
+        <div class="card-actions">
+            <form method="get" class="d-flex">
+                <input type="text" name="search" value="@Model.Search" class="form-control form-control-sm me-2" placeholder="Pesquisar..." />
+                <button class="btn btn-sm btn-primary" type="submit">Pesquisar</button>
+            </form>
+            <a asp-action="Create" class="btn btn-sm btn-success ms-2">Novo Equipamento</a>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Tipo</th><th>Marca</th><th>Modelo</th><th>N.º Série</th><th>Cliente</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var e in Model.Items)
+            {
+                <tr>
+                    <td><a asp-action="Details" asp-route-id="@e.Id">@e.TipoEquipamento</a></td>
+                    <td>@e.Marca</td>
+                    <td>@e.Modelo</td>
+                    <td>@e.NumeroSerie</td>
+                    <td>@e.Cliente?.Nome</td>
+                    <td class="text-end">
+                        <a asp-action="Edit" asp-route-id="@e.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@e.Id" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

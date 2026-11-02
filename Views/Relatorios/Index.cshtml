@@ -1,0 +1,46 @@
+﻿@model IEnumerable<Reparacao>
+@{ ViewData["Title"] = "Relatórios"; }
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Relatório de reparações</h3>
+        <div class="card-actions">
+            <form method="get" class="d-flex flex-wrap gap-2">
+                <select name="clienteId" class="form-select form-select-sm">
+                    <option value="">Cliente</option>
+                    @foreach (var c in (ViewBag.Clientes as IEnumerable<Cliente>) ?? new List<Cliente>()) { <option value="@c.Id">@c.Nome</option> }
+                </select>
+                <select name="tecnicoId" class="form-select form-select-sm">
+                    <option value="">Técnico</option>
+                    @foreach (var t in (ViewBag.Tecnicos as IEnumerable<Tecnico>) ?? new List<Tecnico>()) { <option value="@t.Id">@t.Nome</option> }
+                </select>
+                <select name="estado" class="form-select form-select-sm">
+                    <option value="">Estado</option>
+                    @foreach (var e in ReparacaoService.Estados) { <option value="@e">@e</option> }
+                </select>
+                <button class="btn btn-sm btn-primary" type="submit">Filtrar</button>
+            </form>
+        </div>
+    </div>
+    <div class="card-body">
+        <p><strong>Total geral:</strong> @(((decimal)ViewBag.TotalGeral).ToString("C2"))</p>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Id</th><th>Cliente</th><th>Equipamento</th><th>Técnico</th><th>Estado</th><th>Total (€)</th></tr></thead>
+            <tbody>
+            @foreach (var r in Model)
+            {
+                <tr>
+                    <td>@r.Id</td>
+                    <td>@r.Equipamento?.Cliente?.Nome</td>
+                    <td>@r.Equipamento?.TipoEquipamento</td>
+                    <td>@(r.Tecnico?.Nome ?? "-")</td>
+                    <td>@r.Estado</td>
+                    <td>@r.Intervencoes.Sum(i => i.CustoMaoObra + i.CustoPecas).ToString("C2")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+

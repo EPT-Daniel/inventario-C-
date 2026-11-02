@@ -1,0 +1,41 @@
+﻿@model TecnicoListViewModel
+@{ ViewData["Title"] = "Técnicos"; }
+<div class="card">
+    <div class="card-header">
+        <h3 class="card-title">Técnicos</h3>
+        <div class="card-actions">
+            <form method="get" class="d-flex">
+                <input type="text" name="search" value="@Model.Search" class="form-control form-control-sm me-2" placeholder="Pesquisar..." />
+                <button class="btn btn-sm btn-primary" type="submit">Pesquisar</button>
+            </form>
+            <a asp-action="Create" class="btn btn-sm btn-success ms-2">Novo Técnico</a>
+        </div>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Nome</th><th>Email</th><th>Especialidade</th><th>Ativo</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var t in Model.Items)
+            {
+                <tr>
+                    <td><a asp-action="Details" asp-route-id="@t.Id">@t.Nome</a></td>
+                    <td>@t.Email</td>
+                    <td>@t.Especialidade</td>
+                    <td>
+                        @if (t.Ativo) { <span class="badge bg-success-lt">Ativo</span> } else { <span class="badge bg-secondary-lt">Inativo</span> }
+                    </td>
+                    <td class="text-end">
+                        <form asp-action="ToggleAtivo" method="post" style="display:inline">
+                            @Html.AntiForgeryToken()
+                            <input type="hidden" name="id" value="@t.Id" />
+                            <button type="submit" class="btn btn-sm btn-outline-warning">@(t.Ativo ? "Desativar" : "Ativar")</button>
+                        </form>
+                        <a asp-action="Edit" asp-route-id="@t.Id" class="btn btn-sm btn-outline-primary">Editar</a>
+                        <a asp-action="Delete" asp-route-id="@t.Id" class="btn btn-sm btn-outline-danger">Eliminar</a>
+                    </td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>

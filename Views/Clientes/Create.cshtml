@@ -1,0 +1,19 @@
+﻿@model Cliente
+@{ ViewData["Title"] = "Novo Cliente"; }
+<div class="card">
+    <div class="card-body">
+        <form asp-action="Create" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="mb-3"><label asp-for="Nome" class="form-label"></label><input asp-for="Nome" class="form-control" /><span asp-validation-for="Nome" class="text-danger"></span></div>
+            <div class="mb-3"><label asp-for="NIF" class="form-label"></label><input asp-for="NIF" class="form-control" /><span asp-validation-for="NIF" class="text-danger"></span></div>
+            <div class="mb-3"><label asp-for="Email" class="form-label"></label><input asp-for="Email" class="form-control" /><span asp-validation-for="Email" class="text-danger"></span></div>
+            <div class="mb-3"><label asp-for="Telefone" class="form-label"></label><input asp-for="Telefone" class="form-control" /></div>
+            <div class="mb-3"><label asp-for="Morada" class="form-label"></label><input asp-for="Morada" class="form-control" /></div>
+            <div class="mb-3"><label asp-for="CodigoPostal" class="form-label"></label><input asp-for="CodigoPostal" class="form-control" /></div>
+            <div class="mb-3"><label asp-for="Localidade" class="form-label"></label><input asp-for="Localidade" class="form-control" /></div>
+            <button type="submit" class="btn btn-primary">Guardar</button>
+            <a asp-action="Index" class="btn btn-link">Cancelar</a>
+        </form>
+    </div>
+</div>

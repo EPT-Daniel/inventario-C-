@@ -1,0 +1,38 @@
+﻿@model Equipamento
+@{ ViewData["Title"] = "Ficha do Equipamento"; }
+<div class="card"><div class="card-body">
+<dl class="row">
+<dt class="col-3">Tipo</dt><dd class="col-9">@Model.TipoEquipamento</dd>
+<dt class="col-3">Marca</dt><dd class="col-9">@Model.Marca</dd>
+<dt class="col-3">Modelo</dt><dd class="col-9">@Model.Modelo</dd>
+<dt class="col-3">N.º Série</dt><dd class="col-9">@Model.NumeroSerie</dd>
+<dt class="col-3">Descrição</dt><dd class="col-9">@Model.Descricao</dd>
+<dt class="col-3">Cliente</dt><dd class="col-9"><a asp-controller="Clientes" asp-action="Details" asp-route-id="@Model.ClienteId">@Model.Cliente?.Nome</a></dd>
+<dt class="col-3">Data registo</dt><dd class="col-9">@Model.DataRegisto.ToString("dd/MM/yyyy")</dd>
+</dl>
+</div></div>
+<div class="card mt-3">
+    <div class="card-header"><h3 class="card-title">Histórico de reparações</h3></div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Id</th><th>Estado</th><th>Data entrada</th><th>Técnico</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var r in Model.Reparacoes)
+            {
+                <tr>
+                    <td>@r.Id</td>
+                    <td>@r.Estado</td>
+                    <td>@r.DataEntrada.ToString("dd/MM/yyyy")</td>
+                    <td>@(r.Tecnico?.Nome ?? "-")</td>
+                    <td><a asp-controller="Reparacoes" asp-action="Details" asp-route-id="@r.Id" class="btn btn-sm btn-outline-primary">Ver</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-controller="Reparacoes" asp-action="Create" asp-route-equipamentoId="@Model.Id" class="btn btn-success">Nova Reparação</a>
+    <a asp-action="Index" class="btn btn-link">Voltar</a>
+</div>

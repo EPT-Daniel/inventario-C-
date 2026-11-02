@@ -1,0 +1,38 @@
+﻿@model Cliente
+@{ ViewData["Title"] = "Ficha do Cliente"; }
+<div class="card">
+    <div class="card-header"><h3 class="card-title">@Model.Nome</h3></div>
+    <div class="card-body">
+        <dl class="row">
+            <dt class="col-3">NIF</dt><dd class="col-9">@Model.NIF</dd>
+            <dt class="col-3">Email</dt><dd class="col-9">@Model.Email</dd>
+            <dt class="col-3">Telefone</dt><dd class="col-9">@Model.Telefone</dd>
+            <dt class="col-3">Morada</dt><dd class="col-9">@Model.Morada @Model.CodigoPostal @Model.Localidade</dd>
+            <dt class="col-3">Data registo</dt><dd class="col-9">@Model.DataRegisto.ToString("dd/MM/yyyy")</dd>
+        </dl>
+    </div>
+</div>
+<div class="card mt-3">
+    <div class="card-header"><h3 class="card-title">Equipamentos</h3></div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead><tr><th>Tipo</th><th>Marca</th><th>Modelo</th><th>N.º Série</th><th></th></tr></thead>
+            <tbody>
+            @foreach (var e in Model.Equipamentos)
+            {
+                <tr>
+                    <td><a asp-controller="Equipamentos" asp-action="Details" asp-route-id="@e.Id">@e.TipoEquipamento</a></td>
+                    <td>@e.Marca</td>
+                    <td>@e.Modelo</td>
+                    <td>@e.NumeroSerie</td>
+                    <td><a asp-controller="Reparacoes" asp-action="Create" asp-route-equipamentoId="@e.Id" class="btn btn-sm btn-primary">Nova Reparação</a></td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="mt-3">
+    <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Editar</a>
+    <a asp-action="Index" class="btn btn-link">Voltar</a>
+</div>

@@ -1,0 +1,11 @@
+﻿@model Intervencao
+@{ ViewData["Title"] = "Eliminar Intervenção"; }
+<div class="card"><div class="card-body">
+<p>Eliminar esta intervenção?</p>
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-controller="Reparacoes" asp-action="Details" asp-route-id="@Model.ReparacaoId" class="btn btn-link">Cancelar</a>
+</form>
+</div></div>

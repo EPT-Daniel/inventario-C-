@@ -1,8 +1,102 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
+﻿@model DashboardViewModel
+@{
+    ViewData["Title"] = "Dashboard";
 }
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="row row-deck row-cards">
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Clientes</div>
+                <div class="h1 mb-0">@Model.TotalClientes</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Equipamentos</div>
+                <div class="h1 mb-0">@Model.TotalEquipamentos</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Reparações</div>
+                <div class="h1 mb-0">@Model.TotalReparacoes</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">A aguardar diagnóstico</div>
+                <div class="h1 mb-0">@Model.AguardarDiagnostico</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Em reparação</div>
+                <div class="h1 mb-0">@Model.EmReparacao</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">A aguardar peças</div>
+                <div class="h1 mb-0">@Model.AguardarPecas</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Concluídas</div>
+                <div class="h1 mb-0">@Model.Concluidas</div>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-6 col-lg-3">
+        <div class="card">
+            <div class="card-body">
+                <div class="subheader">Entregues</div>
+                <div class="h1 mb-0">@Model.Entregues</div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="card mt-3">
+    <div class="card-header">
+        <h3 class="card-title">Reparações mais recentes</h3>
+    </div>
+    <div class="table-responsive">
+        <table class="table table-vcenter card-table">
+            <thead>
+                <tr>
+                    <th>Id</th>
+                    <th>Cliente</th>
+                    <th>Equipamento</th>
+                    <th>Técnico</th>
+                    <th>Estado</th>
+                    <th>Data entrada</th>
+                </tr>
+            </thead>
+            <tbody>
+            @foreach (var r in Model.Recentes)
+            {
+                <tr>
+                    <td>@r.Id</td>
+                    <td>@r.Equipamento?.Cliente?.Nome</td>
+                    <td>@r.Equipamento?.TipoEquipamento</td>
+                    <td>@(r.Tecnico?.Nome ?? "-")</td>
+                    <td><span class="badge bg-blue-lt">@r.Estado</span></td>
+                    <td>@r.DataEntrada.ToString("dd/MM/yyyy")</td>
+                </tr>
+            }
+            </tbody>
+        </table>
+    </div>
 </div>

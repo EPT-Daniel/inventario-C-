@@ -1,0 +1,18 @@
+﻿@model Equipamento
+@{ ViewData["Title"] = "Novo Equipamento"; }
+<div class="card"><div class="card-body">
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3"><label asp-for="ClienteId" class="form-label">Cliente</label>
+        <select asp-for="ClienteId" class="form-select" asp-items="@(new Microsoft.AspNetCore.Mvc.Rendering.SelectList(ViewBag.Clientes, "Id", "Nome"))"></select>
+        <span asp-validation-for="ClienteId" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="TipoEquipamento" class="form-label"></label><input asp-for="TipoEquipamento" class="form-control" /><span asp-validation-for="TipoEquipamento" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="Marca" class="form-label"></label><input asp-for="Marca" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="Modelo" class="form-label"></label><input asp-for="Modelo" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="NumeroSerie" class="form-label"></label><input asp-for="NumeroSerie" class="form-control" /></div>
+    <div class="mb-3"><label asp-for="Descricao" class="form-label"></label><textarea asp-for="Descricao" class="form-control"></textarea></div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-action="Index" class="btn btn-link">Cancelar</a>
+</form>
+</div></div>

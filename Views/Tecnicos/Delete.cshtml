@@ -1,0 +1,11 @@
+﻿@model Tecnico
+@{ ViewData["Title"] = "Eliminar Técnico"; }
+<div class="card"><div class="card-body">
+<p>Eliminar <strong>@Model.Nome</strong>?</p>
+<form asp-action="Delete" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="Id" />
+    <button type="submit" class="btn btn-danger">Eliminar</button>
+    <a asp-action="Index" class="btn btn-link">Cancelar</a>
+</form>
+</div></div>

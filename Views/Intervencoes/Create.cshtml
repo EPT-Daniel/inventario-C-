@@ -1,0 +1,19 @@
+﻿@model Intervencao
+@{ ViewData["Title"] = "Nova Intervenção"; var rep = ViewBag.Reparacao as Reparacao; }
+<div class="card"><div class="card-body">
+@if (rep != null) { <p class="text-muted">Reparação #@rep.Id — @rep.Equipamento?.TipoEquipamento</p> }
+<form asp-action="Create" method="post">
+    @Html.AntiForgeryToken()
+    <input type="hidden" asp-for="ReparacaoId" />
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="mb-3"><label asp-for="DataIntervencao" class="form-label"></label><input asp-for="DataIntervencao" class="form-control" type="datetime-local" /></div>
+    <div class="mb-3"><label asp-for="DescricaoTrabalho" class="form-label"></label><textarea asp-for="DescricaoTrabalho" class="form-control"></textarea><span asp-validation-for="DescricaoTrabalho" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="PecasUtilizadas" class="form-label"></label><textarea asp-for="PecasUtilizadas" class="form-control"></textarea></div>
+    <div class="mb-3"><label asp-for="TempoTrabalho" class="form-label">Tempo de trabalho (horas)</label><input asp-for="TempoTrabalho" class="form-control" type="number" step="0.01" min="0" /></div>
+    <div class="mb-3"><label asp-for="CustoMaoObra" class="form-label">Custo mão de obra (€)</label><input asp-for="CustoMaoObra" class="form-control" type="number" step="0.01" min="0" /><span asp-validation-for="CustoMaoObra" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="CustoPecas" class="form-label">Custo peças (€)</label><input asp-for="CustoPecas" class="form-control" type="number" step="0.01" min="0" /><span asp-validation-for="CustoPecas" class="text-danger"></span></div>
+    <div class="mb-3"><label asp-for="Observacoes" class="form-label"></label><textarea asp-for="Observacoes" class="form-control"></textarea></div>
+    <button type="submit" class="btn btn-primary">Guardar</button>
+    <a asp-controller="Reparacoes" asp-action="Details" asp-route-id="@Model.ReparacaoId" class="btn btn-link">Cancelar</a>
+</form>
+</div></div>
