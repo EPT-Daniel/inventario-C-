@@ -8,3 +8,5 @@ alterado no github
 Boa!! 
 
 Alteração de hoje
+
+Alterações necessárias
