@@ -52,7 +52,7 @@ public class TecnicoService : ITecnicoService
     public async Task<(bool Success, string? Error)> ToggleAtivoAsync(int id)
     {
         var t = await _context.Tecnicos.FindAsync(id);
-        if (t == null) return (false, "TÃ©cnico nÃ£o encontrado.");
+        if (t == null) return (false, "Técnico não encontrado.");
         t.Ativo = !t.Ativo;
         await _context.SaveChangesAsync();
         return (true, null);
@@ -61,9 +61,9 @@ public class TecnicoService : ITecnicoService
     public async Task<(bool Success, string? Error)> DeleteAsync(int id)
     {
         var t = await _context.Tecnicos.Include(x => x.Reparacoes).FirstOrDefaultAsync(x => x.Id == id);
-        if (t == null) return (false, "TÃ©cnico nÃ£o encontrado.");
+        if (t == null) return (false, "Técnico não encontrado.");
         if (t.Reparacoes.Any())
-            return (false, "NÃ£o Ã© possÃ­vel eliminar o tÃ©cnico porque possui reparaÃ§Ãµes associadas. Desative-o.");
+            return (false, "Não é possível eliminar o técnico porque possui reparações associadas. Desative-o.");
         _context.Tecnicos.Remove(t);
         await _context.SaveChangesAsync();
         return (true, null);

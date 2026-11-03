@@ -34,10 +34,10 @@ public class DashboardService : IDashboardService
             TotalClientes = await _context.Clientes.CountAsync(),
             TotalEquipamentos = await _context.Equipamentos.CountAsync(),
             TotalReparacoes = await _context.Reparacoes.CountAsync(),
-            AguardarDiagnostico = await _context.Reparacoes.CountAsync(r => r.Estado == "A aguardar diagnÃ³stico"),
-            EmReparacao = await _context.Reparacoes.CountAsync(r => r.Estado == "Em reparaÃ§Ã£o"),
-            AguardarPecas = await _context.Reparacoes.CountAsync(r => r.Estado == "A aguardar peÃ§as"),
-            Concluidas = await _context.Reparacoes.CountAsync(r => r.Estado == "ConcluÃ­da"),
+            AguardarDiagnostico = await _context.Reparacoes.CountAsync(r => r.Estado == "A aguardar diagnóstico"),
+            EmReparacao = await _context.Reparacoes.CountAsync(r => r.Estado == "Em reparação"),
+            AguardarPecas = await _context.Reparacoes.CountAsync(r => r.Estado == "A aguardar peças"),
+            Concluidas = await _context.Reparacoes.CountAsync(r => r.Estado == "Concluída"),
             Entregues = await _context.Reparacoes.CountAsync(r => r.Estado == "Entregue ao cliente"),
             Recentes = await _context.Reparacoes
                 .Include(r => r.Equipamento).ThenInclude(e => e.Cliente!)

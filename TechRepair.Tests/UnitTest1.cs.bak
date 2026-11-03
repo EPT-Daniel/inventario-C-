@@ -1,0 +1,24 @@
+﻿using System;
+using Microsoft.EntityFrameworkCore;
+using TechRepair.Data;
+using TechRepair.Models;
+using TechRepair.Services;
+using Xunit;
+
+namespace TechRepair.Tests;
+
+public class TechRepairTests : IDisposable
+{
+    private readonly DbContextOptions<ApplicationDbContext> _options;
+
+    public TechRepairTests()
+    {
+        _options = new DbContextOptionsBuilder<ApplicationDbContext>()
+            .UseInMemoryDatabase(databaseName: Guid.NewGuid().ToString())
+            .Options;
+    }
+
+    public void Dispose()
+    {
+    }
+}
