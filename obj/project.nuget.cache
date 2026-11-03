@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "KNNF8adU/h0=",
+  "dgSpecHash": "t9m6p22s+Qw=",
   "success": true,
-  "projectFilePath": "C:\\Users\\daniel\\invent_b1\\inventario-C-\\TechRepair.csproj",
+  "projectFilePath": "D:\\invent-c\\inv\\inventario-C-\\TechRepair.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\daniel\\.nuget\\packages\\humanizer.core\\2.14.1\\humanizer.core.2.14.1.nupkg.sha512",
     "C:\\Users\\daniel\\.nuget\\packages\\microsoft.build.framework\\18.0.2\\microsoft.build.framework.18.0.2.nupkg.sha512",

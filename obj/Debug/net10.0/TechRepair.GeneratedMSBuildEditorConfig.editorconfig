@@ -20,137 +20,137 @@ build_property.TargetFrameworkVersion = v10.0
 build_property.EntryPointFilePath = 
 build_property.RootNamespace = TechRepair
 build_property.RootNamespace = TechRepair
-build_property.ProjectDir = C:\Users\daniel\invent_b1\inventario-C-\
+build_property.ProjectDir = D:\invent-c\inv\inventario-C-\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.RazorLangVersion = 10.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\daniel\invent_b1\inventario-C-
+build_property.MSBuildProjectDirectory = D:\invent-c\inv\inventario-C-
 build_property._RazorSourceGeneratorDebug = 
 build_property.EffectiveAnalysisLevelStyle = 10.0
 build_property.EnableCodeStyleSeverity = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Clientes/Create.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Clientes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Clientes/Delete.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Clientes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Clientes/Details.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Clientes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Clientes/Edit.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Clientes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Clientes/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Clientes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2xpZW50ZXNcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Equipamentos/Create.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Equipamentos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudG9zXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Equipamentos/Delete.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Equipamentos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudG9zXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Equipamentos/Details.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Equipamentos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudG9zXERldGFpbHMuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Equipamentos/Edit.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Equipamentos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudG9zXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Equipamentos/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Equipamentos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXF1aXBhbWVudG9zXEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Home/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Home/Privacy.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Intervencoes/Create.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Intervencoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2ZW5jb2VzXENyZWF0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Intervencoes/Delete.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Intervencoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2ZW5jb2VzXERlbGV0ZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Intervencoes/Edit.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Intervencoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSW50ZXJ2ZW5jb2VzXEVkaXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Relatorios/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Relatorios/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVsYXRvcmlvc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Reparacoes/Create.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Reparacoes/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYXJhY29lc1xDcmVhdGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Reparacoes/Delete.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Reparacoes/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYXJhY29lc1xEZWxldGUuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Reparacoes/Details.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Reparacoes/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYXJhY29lc1xEZXRhaWxzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Reparacoes/Edit.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Reparacoes/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYXJhY29lc1xFZGl0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Reparacoes/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Reparacoes/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUmVwYXJhY29lc1xJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Shared/Error.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Shared/_ValidationScriptsPartial.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Tecnicos/Create.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Tecnicos/Create.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb3NcQ3JlYXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Tecnicos/Delete.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Tecnicos/Delete.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb3NcRGVsZXRlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Tecnicos/Details.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Tecnicos/Details.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb3NcRGV0YWlscy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Tecnicos/Edit.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Tecnicos/Edit.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb3NcRWRpdC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Tecnicos/Index.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Tecnicos/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcVGVjbmljb3NcSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/_ViewImports.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/_ViewStart.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/daniel/invent_b1/inventario-C-/Views/Shared/_Layout.cshtml]
+[D:/invent-c/inv/inventario-C-/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-r8i7lehjjx

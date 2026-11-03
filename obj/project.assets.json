@@ -2434,11 +2434,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\daniel\\invent_b1\\inventario-C-\\TechRepair.csproj",
+      "projectUniqueName": "D:\\invent-c\\inv\\inventario-C-\\TechRepair.csproj",
       "projectName": "TechRepair",
-      "projectPath": "C:\\Users\\daniel\\invent_b1\\inventario-C-\\TechRepair.csproj",
+      "projectPath": "D:\\invent-c\\inv\\inventario-C-\\TechRepair.csproj",
       "packagesPath": "C:\\Users\\daniel\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\daniel\\invent_b1\\inventario-C-\\obj\\",
+      "outputPath": "D:\\invent-c\\inv\\inventario-C-\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\daniel\\AppData\\Roaming\\NuGet\\NuGet.Config"
